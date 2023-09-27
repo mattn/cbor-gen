@@ -357,7 +357,7 @@ func (t *SimpleTypeTree) UnmarshalCBOR(r io.Reader) (err error) {
 					}
 					t.Stuff = new(SimpleTypeTree)
 					if err := t.Stuff.UnmarshalCBOR(cr); err != nil {
-						return xerrors.Errorf("unmarshaling t.Stuff pointer: %w", err)
+						return xerrors.Errorf("unmarshalling t.Stuff pointer: %w", err)
 					}
 				}
 
@@ -421,7 +421,7 @@ func (t *SimpleTypeTree) UnmarshalCBOR(r io.Reader) (err error) {
 					}
 					t.Stufff = new(SimpleTypeTwo)
 					if err := t.Stufff.UnmarshalCBOR(cr); err != nil {
-						return xerrors.Errorf("unmarshaling t.Stufff pointer: %w", err)
+						return xerrors.Errorf("unmarshalling t.Stufff pointer: %w", err)
 					}
 				}
 
@@ -954,7 +954,7 @@ func (t *SimpleStructV1) UnmarshalCBOR(r io.Reader) (err error) {
 				{
 
 					if err := v.UnmarshalCBOR(cr); err != nil {
-						return xerrors.Errorf("unmarshaling v: %w", err)
+						return xerrors.Errorf("unmarshalling v: %w", err)
 					}
 
 				}
@@ -1043,7 +1043,7 @@ func (t *SimpleStructV1) UnmarshalCBOR(r io.Reader) (err error) {
 					{
 
 						if err := t.OldArray[i].UnmarshalCBOR(cr); err != nil {
-							return xerrors.Errorf("unmarshaling t.OldArray[i]: %w", err)
+							return xerrors.Errorf("unmarshalling t.OldArray[i]: %w", err)
 						}
 
 					}
@@ -1078,7 +1078,7 @@ func (t *SimpleStructV1) UnmarshalCBOR(r io.Reader) (err error) {
 			{
 
 				if err := t.OldStruct.UnmarshalCBOR(cr); err != nil {
-					return xerrors.Errorf("unmarshaling t.OldStruct: %w", err)
+					return xerrors.Errorf("unmarshalling t.OldStruct: %w", err)
 				}
 
 			}
@@ -1616,7 +1616,7 @@ func (t *SimpleStructV2) UnmarshalCBOR(r io.Reader) (err error) {
 				{
 
 					if err := v.UnmarshalCBOR(cr); err != nil {
-						return xerrors.Errorf("unmarshaling v: %w", err)
+						return xerrors.Errorf("unmarshalling v: %w", err)
 					}
 
 				}
@@ -1707,7 +1707,7 @@ func (t *SimpleStructV2) UnmarshalCBOR(r io.Reader) (err error) {
 				{
 
 					if err := v.UnmarshalCBOR(cr); err != nil {
-						return xerrors.Errorf("unmarshaling v: %w", err)
+						return xerrors.Errorf("unmarshalling v: %w", err)
 					}
 
 				}
@@ -1796,7 +1796,7 @@ func (t *SimpleStructV2) UnmarshalCBOR(r io.Reader) (err error) {
 					{
 
 						if err := t.NewArray[i].UnmarshalCBOR(cr); err != nil {
-							return xerrors.Errorf("unmarshaling t.NewArray[i]: %w", err)
+							return xerrors.Errorf("unmarshalling t.NewArray[i]: %w", err)
 						}
 
 					}
@@ -1857,7 +1857,7 @@ func (t *SimpleStructV2) UnmarshalCBOR(r io.Reader) (err error) {
 					{
 
 						if err := t.OldArray[i].UnmarshalCBOR(cr); err != nil {
-							return xerrors.Errorf("unmarshaling t.OldArray[i]: %w", err)
+							return xerrors.Errorf("unmarshalling t.OldArray[i]: %w", err)
 						}
 
 					}
@@ -1892,7 +1892,7 @@ func (t *SimpleStructV2) UnmarshalCBOR(r io.Reader) (err error) {
 			{
 
 				if err := t.NewStruct.UnmarshalCBOR(cr); err != nil {
-					return xerrors.Errorf("unmarshaling t.NewStruct: %w", err)
+					return xerrors.Errorf("unmarshalling t.NewStruct: %w", err)
 				}
 
 			}
@@ -1902,7 +1902,7 @@ func (t *SimpleStructV2) UnmarshalCBOR(r io.Reader) (err error) {
 			{
 
 				if err := t.OldStruct.UnmarshalCBOR(cr); err != nil {
-					return xerrors.Errorf("unmarshaling t.OldStruct: %w", err)
+					return xerrors.Errorf("unmarshalling t.OldStruct: %w", err)
 				}
 
 			}

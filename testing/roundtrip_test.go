@@ -96,7 +96,7 @@ func TestDeferredContainer(t *testing.T) {
 	testValueRoundtrip(t, zero, recepticle)
 }
 
-func TestNilValueDeferredUnmarshaling(t *testing.T) {
+func TestNilValueDeferredUnmarshalling(t *testing.T) {
 	var zero DeferredContainer
 	zero.Deferred = &cbg.Deferred{Raw: []byte{0xf6}}
 

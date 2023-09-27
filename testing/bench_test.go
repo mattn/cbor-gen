@@ -32,7 +32,7 @@ func BenchmarkMarshaling(b *testing.B) {
 	}
 }
 
-func BenchmarkUnmarshaling(b *testing.B) {
+func BenchmarkUnmarshalling(b *testing.B) {
 	r := rand.New(rand.NewSource(123456))
 	val, ok := quick.Value(reflect.TypeOf(SimpleTypeTwo{}), r)
 	if !ok {
@@ -136,7 +136,7 @@ func BenchmarkMapMarshaling(b *testing.B) {
 	}
 }
 
-func BenchmarkMapUnmarshaling(b *testing.B) {
+func BenchmarkMapUnmarshalling(b *testing.B) {
 	r := rand.New(rand.NewSource(123456))
 	val, ok := quick.Value(reflect.TypeOf(SimpleTypeTree{}), r)
 	if !ok {

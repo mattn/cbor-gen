@@ -537,7 +537,7 @@ func (t *SimpleTypeTwo) UnmarshalCBOR(r io.Reader) (err error) {
 			}
 			t.Stuff = new(SimpleTypeTwo)
 			if err := t.Stuff.UnmarshalCBOR(cr); err != nil {
-				return xerrors.Errorf("unmarshaling t.Stuff pointer: %w", err)
+				return xerrors.Errorf("unmarshalling t.Stuff pointer: %w", err)
 			}
 		}
 
@@ -823,7 +823,7 @@ func (t *SimpleTypeTwo) UnmarshalCBOR(r io.Reader) (err error) {
 			{
 
 				if err := t.Arrrrrghay[i].UnmarshalCBOR(cr); err != nil {
-					return xerrors.Errorf("unmarshaling t.Arrrrrghay[i]: %w", err)
+					return xerrors.Errorf("unmarshalling t.Arrrrrghay[i]: %w", err)
 				}
 
 			}
@@ -903,7 +903,7 @@ func (t *DeferredContainer) UnmarshalCBOR(r io.Reader) (err error) {
 			}
 			t.Stuff = new(SimpleTypeOne)
 			if err := t.Stuff.UnmarshalCBOR(cr); err != nil {
-				return xerrors.Errorf("unmarshaling t.Stuff pointer: %w", err)
+				return xerrors.Errorf("unmarshalling t.Stuff pointer: %w", err)
 			}
 		}
 
@@ -1182,7 +1182,7 @@ func (t *ThingWithSomeTime) UnmarshalCBOR(r io.Reader) (err error) {
 	{
 
 		if err := t.When.UnmarshalCBOR(cr); err != nil {
-			return xerrors.Errorf("unmarshaling t.When: %w", err)
+			return xerrors.Errorf("unmarshalling t.When: %w", err)
 		}
 
 	}

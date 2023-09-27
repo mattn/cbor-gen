@@ -576,7 +576,7 @@ func emitCborMarshalSliceField(w io.Writer, f Field) error {
 }
 
 func emitCborMarshalStructTuple(w io.Writer, gti *GenTypeInfo) error {
-	// 9 byte buffer to accomodate for the maximum header length (cbor varints are maximum 9 bytes_
+	// 9 byte buffer to accommodate for the maximum header length (cbor varints are maximum 9 bytes_
 	err := doTemplate(w, gti, `var lengthBuf{{ .Name }} = {{ .TupleHeaderAsByteString }}
 func (t *{{ .Name }}) MarshalCBOR(w io.Writer) error {
 	if t == nil {
@@ -767,12 +767,12 @@ func emitCborUnmarshalStructField(w io.Writer, f Field) error {
 			}
 			{{ .Name }} = new({{ .TypeName }})
 			if err := {{ .Name }}.UnmarshalCBOR(cr); err != nil {
-				return xerrors.Errorf("unmarshaling {{ .Name }} pointer: %w", err)
+				return xerrors.Errorf("unmarshalling {{ .Name }} pointer: %w", err)
 			}
 		}
 {{ else }}
 		if err := {{ .Name }}.UnmarshalCBOR(cr); err != nil {
-			return xerrors.Errorf("unmarshaling {{ .Name }}: %w", err)
+			return xerrors.Errorf("unmarshalling {{ .Name }}: %w", err)
 		}
 {{ end }}
 	}
